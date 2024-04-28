@@ -1,7 +1,7 @@
 {
     "routes": [
       {
-        "route": "/home",
+        "route": "/home.html",
         "allowedRoles": ["authenticated"]
       }
     ],
