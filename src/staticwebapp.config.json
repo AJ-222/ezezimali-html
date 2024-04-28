@@ -1,7 +1,12 @@
 {
    "routes": [
       {
-        "route": "/home.html"
+        "route": "/",
+        "path": "index.html"
+      },
+      {
+        "route": "/home",
+        "path": "home.html"
       }
     ]
 }
