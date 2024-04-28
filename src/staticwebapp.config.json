@@ -4,12 +4,5 @@
         "route": "/home.html",
         "allowedRoles": ["authenticated"]
       }
-    ],   
-      "responseOverrides": {
-        "401": {
-          "redirect": "/.auth/login/aad?post_login_redirect_uri=https://mango-pond-0eb19fd03.5.azurestaticapps.net/home.html",
-          "statusCode": 302
-      }
-    }
-
+    ]
 }
