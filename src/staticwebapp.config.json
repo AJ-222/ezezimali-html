@@ -6,16 +6,11 @@
       },
       {
         "route": "/home",
-<<<<<<< HEAD
         "path": "home.html"
       },
       {
         "route": "/logout",
         "redirect": "/.auth/logout?post_logout_redirect_uri=/"
-=======
-        "path": "home.html",
-        "allowedRoles": ["anonymous"]
->>>>>>> 343cfdde81e5f31bd987ab0798790b392497dc91
       }
     ],
     "responseOverrides": {
