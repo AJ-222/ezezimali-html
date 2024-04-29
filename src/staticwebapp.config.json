@@ -7,7 +7,16 @@
       {
         "route": "/home",
         "path": "home.html"
+      },
+      {
+        "route": "/logout",
+        "redirect": "/.auth/logout?post_logout_redirect_uri=/"
       }
-    ]
-
+    ],
+    "responseOverrides": {
+      "401": {
+        "redirect": "/.auth/login/aad?post_login_redirect_uri=/home",
+        "statusCode": 302
+      }
+    }
 }
