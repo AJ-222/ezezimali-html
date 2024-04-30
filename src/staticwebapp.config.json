@@ -6,7 +6,8 @@
       },
       {
         "route": "/home",
-        "path": "home.html"
+        "path": "home.html",
+        "allowedRoles": ["authenticated"]
       },
       {
         "route": "/logout",
