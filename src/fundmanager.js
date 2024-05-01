@@ -43,7 +43,7 @@ function getInfo(){
     else if (userRoles.includes("fundmanager")){
       mainRole = "Fund Manager";
       // If the user is a fund manager, change the button text and link
-      applyBtn.innerHTML = "Go to fund manager page";
+      applyBtn.innerHTML = "Request new fund";
       applyBtnParent.href = "/fundmanager"; // Change this to the URL of your fund manager page
     }
     else{
@@ -80,4 +80,12 @@ window.onclick = function(event) {
         modal.style.display = "none";
         adModal.style.display = "none";
     }
-}
+  async function getFunds(){
+  {
+    fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/rest/funds')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => console.error('Error:', error));
+  }
