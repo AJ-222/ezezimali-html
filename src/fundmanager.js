@@ -33,8 +33,8 @@ function getInfo(){
     document.getElementById("email").innerHTML = "Welcome " + user;
     const length = userRoles.length;
     mainRole = userRoles[length - 1];
-    if (mainRole == "Authenticated"){
-      mainRole = "Appplicant";
+    if (mainRole == "authenticated"){
+      mainRole = "Applicant";
     }
     document.getElementById("role").innerHTML = "Role: " + mainRole;
   })
