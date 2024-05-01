@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <p>FUNDING PAGE</p>
-        <script src="" async defer></script>
-    </body>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/fundmanagerstyles.css">
+    <title>Fund Manager's Page</title>
+</head>
+<body onload="getInfo()">
+    <header>
+        <img src="Logos+icons/TopPage.png" alt="Ezezimali logo" id="larger-banner-logo">
+        <nav>
+            <a class="navIcons" href="#" title="Inbox"><img src="Logos+icons/inbox.png" alt="Inbox Icon"></a>
+            <a class = "navIcons" href="#" title="Manage Funds"><img src="Logos+icons/fund-manager.png" alt="Fund Manager Icon"></a>
+            <a class = "navIcons" href="#" title="Account"><img onclick="getInfo()" src="Logos+icons/account.png" alt="Account Icon"></a>
+            <a class = "navIcons" href="/.auth/logout?post_logout_redirect_uri=/">Log out</a>
+        </nav>
+    </header>
+    <main>
+        <section id = "account">
+            <h2>Account Information</h2>
+            <p id="email">Welcome </p>
+            <p id="role">Role: </p>
+        </section>
+        <section id="advertise">
+            <h2>Advertise Funding Opportunities</h2>
+            <button id="adButton">Click here to create a new funding opportunity</button>
+            <aside id="adModal" class="modal">
+                <section class="modal-content">
+                    <button class="close">&times;</button>
+                    <h1>Create a new funding opportunity</h1>
+                    <form id="adForm">
+                        <label for="funderName">Funder Name:</label><br>
+                        <input type="text" id="funderName" name="funderName"><br>
+                        <label for="opportunityType">Opportunity Type:</label><br>
+                        <select id="opportunityType" name="opportunityType">
+                            <option value="Education">Education</option>
+                            <option value="Business">Business</option>
+                            <option value="Event">Event</option>
+                        </select><br>
+                        <label for="amount">Amount:</label><br>
+                        <input type="number" id="amount" name="amount"><br>
+                        <label for="description">Description:</label><br>
+                        <textarea id="description" name="description"></textarea>
+                    </form>
+                    <button id="submitAd">Submit</button>
+                </section>
+            </aside>
+        </section>
+        <section id="applications">
+            <h2>Review Applications</h2>
+            <article class="application">
+                <h3>Name: Applicant A</h3>
+                <p>Type: Education</p>
+                <p>Brief: I am seeking funding for my college tuition...</p>
+                <button class="open-modal">View Details</button>
+            </article>
+            <article class="application">
+                <h3>Name: Applicant B</h3>
+                <p>Type: Business</p>
+                <p>Brief: I need funds to start my own bakery...</p>
+                <button class="open-modal">View Details</button>
+            </article>
+            <article class="application">
+                <h3>Name: Applicant C</h3>
+                <p>Type: Event</p>
+                <p>Brief: I am organizing a charity event and need funding...</p>
+                <button class="open-modal">View Details</button>
+            </article>
+            <article class="application">
+                <h3>Name: Applicant D</h3>
+                <p>Type: Education</p>
+                <p>Brief: I am a student in need of funds for buying books...</p>
+                <button class="open-modal">View Details</button>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Ezezimali - Invest in you</p>
+    </footer>
+    <aside id="myModal" class="modal">
+        <section class="modal-content">
+            <button class="close">&times;</button>
+            <h3>Name: Applicant A</h3>
+            <p>Type: Education</p>
+            <p>Brief: I am seeking funding for my college tuition...</p>
+            <button>Approve</button>
+            <button>Deny</button>
+        </section>
+    </aside>
+</body>
+<script src="fundmanager.js"></script>
 </html>
