@@ -9,7 +9,7 @@
         "path": "admin.html",
         "allowedRoles": ["admin"]
       },
-      {
+      { 
         "route": "/funding",
         "path": "funding.html",
         "allowedRoles": ["authenticated"]
