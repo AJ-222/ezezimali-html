@@ -6,14 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Vanilla JavaScript App</title>
+  <script src="fundmanager.js" defer></script>
 </head>
 
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
-    <button><a href="/.auth/login/aad/callback">Login with Microsoft</a>
+    <button><a href="/.auth/login/aad ">Login with Microsoft</a>
     </button>
-    
+
+
+
+
+    <script>
+      (async function() {
+          const { data } = await( await fetch(`https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me`)).json();
+          console.log(data);
+      }());
+      </script>
   </main>
 </body>
 
