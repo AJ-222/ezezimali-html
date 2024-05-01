@@ -20,6 +20,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
 function getInfo(){
   fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me')
   .then(response => response.json())
@@ -32,11 +33,18 @@ function getInfo(){
     console.log(userRoles);
     document.getElementById("email").innerHTML = "Welcome " + user;
 
+    // Get a reference to the button and its parent anchor tag
+    var applyBtn = document.getElementById("applyBtn");
+    var applyBtnParent = applyBtn.parentElement;
+
     if (userRoles.includes("admin")){
       mainRole = "Admin";
     }
     else if (userRoles.includes("fundmanager")){
       mainRole = "Fund Manager";
+      // If the user is a fund manager, change the button text and link
+      applyBtn.innerHTML = "Request new fund";
+      applyBtnParent.href = "/fundmanager"; // Change this to the URL of your fund manager page
     }
     else{
       mainRole = "Applicant";
@@ -54,7 +62,25 @@ function getInfo(){
   .catch(error => console.error('Error:', error));
 }
 
-async function getFunds(){
+//creating the pop up to create a new opportunity
+var adModal = document.getElementById("adModal");
+var adButton = document.getElementById("adButton");
+var closeAdModal = document.getElementsByClassName("close")[1]; // Assuming this is the second close button
+
+adButton.onclick = function() {
+    adModal.style.display = "block";
+}
+
+closeAdModal.onclick = function() {
+    adModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal || event.target == adModal) {
+        modal.style.display = "none";
+        adModal.style.display = "none";
+    }
+  async function getFunds(){
   {
     fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/rest/funds')
     .then(response => response.json())
@@ -63,4 +89,3 @@ async function getFunds(){
     })
     .catch(error => console.error('Error:', error));
   }
-}
