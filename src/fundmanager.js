@@ -33,6 +33,9 @@ function getInfo(){
     document.getElementById("email").innerHTML = "Welcome " + user;
     const length = userRoles.length;
     mainRole = userRoles[length - 1];
+    if (mainRole == "Authenticated"){
+      mainRole = "Appplicant";
+    }
     document.getElementById("role").innerHTML = "Role: " + mainRole;
   })
   .catch(error => console.error('Error:', error));
