@@ -21,16 +21,11 @@ function getInfo(){
   fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me')
   .then(response => response.json())
   .then(data => {
-    const user = data.clientPrincipal;
-    console.log(user);
+    const user = data.clientPrincipal.userDetails;
+    const id = data.clientPrincipal.userID;
+    const userRoles = data.clientPrincipal.userRoles;
+    document.getElementById("email").innerHTML = "Welcome " + userName;
+    document.getElementById("role").innerHTML = "Role: " + userRoles;
   })
   .catch(error => console.error('Error:', error));
-const userName = user.userDetails;
-const id = user.userID;
-const userRoles = user.userRoles;
-console.log(user);
-console.log(id);
-console.log(userRoles);
-document.getElementById("email").innerHTML = "Welcome " + userName;
-document.getElementById("role").innerHTML = "Role: " + userRoles;
 }
