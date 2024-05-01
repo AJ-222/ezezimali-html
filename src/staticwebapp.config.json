@@ -19,24 +19,6 @@
         "redirect": "/.auth/login/aad?post_login_redirect_uri=/home",
         "statusCode": 302
       }
-    },
-    "auth": {
-      "rolesSource": "/api/getroles",
-      "identityProviders": {
-        "azureActiveDirectory": {
-          "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-          "registration": {
-            "openIdIssuer": "https://login.microsoftonline.com/4b1b908c-5582-4377-ba07-a36d65e34934",
-            "clientIdSettingName": "AAD_CLIENT_ID",
-            "clientSecretSettingName": "AAD_CLIENT_SECRET"
-          },
-          "login": {
-            "loginParameters": [
-              "resource=https://graph.microsoft.com"
-            ]
-          }
-        }
-      }
     }
 
 }
