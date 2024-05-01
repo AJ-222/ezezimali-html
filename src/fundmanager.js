@@ -25,15 +25,15 @@ function getInfo(){
   .then(response => response.json())
   .then(data => {
     user = data.clientPrincipal.userDetails;
-    id = data.clientPrincipal.userID;
+    id = data.clientPrincipal.userId;
     userRoles = data.clientPrincipal.userRoles;
     console.log(user);
     console.log(id);
     console.log(userRoles);
     document.getElementById("email").innerHTML = "Welcome " + user;
     const length = userRoles.length;
-    const mainRole = userRoles[length - 1];
-    document.getElementById("role").innerHTML = "Role: " + userRoles[0];
+    mainRole = userRoles[length - 1];
+    document.getElementById("role").innerHTML = "Role: " + mainRole;
   })
   .catch(error => console.error('Error:', error));
 }
