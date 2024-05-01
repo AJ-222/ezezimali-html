@@ -1,9 +1,9 @@
 var modal = document.getElementById("myModal");
 var btns = document.getElementsByClassName("open-modal");
 var span = document.getElementsByClassName("close")[0];
-const user = ""
-const id = ""
-const mainRole = ""
+let user = ""
+let id = ""
+let mainRole = ""
 
 for(let i = 0; i < btns.length; i++) {
   btns[i].onclick = function() {
