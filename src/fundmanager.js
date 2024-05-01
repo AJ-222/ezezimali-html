@@ -17,11 +17,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-(async function() {
-  try {
-      const response = await fetch(`https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me`);
-      console.log(response);
-  } catch (error) {
-      console.error('Error:', error);
-  }
-})();
+function getInfo(){
+  fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+}
