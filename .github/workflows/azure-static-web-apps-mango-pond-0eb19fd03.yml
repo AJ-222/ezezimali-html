@@ -33,15 +33,6 @@ jobs:
           output_location: "./src" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
 
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
-        with:
-          token: ${{ 'fed1abd6-63d3-4bf6-a7b0-c1cf290388f4' }}
-      
-
-
-
-
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
@@ -53,4 +44,3 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_MANGO_POND_0EB19FD03 }}
           action: "close"
-          app_location: "./src"
