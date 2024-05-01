@@ -22,4 +22,8 @@ function getInfo(){
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
+  const roles = data.clientPrinciple.userRoles;
+  const email = data.clientPrinciple.userDetails;
+  console.log(roles);
+  console.log(email);
 }
