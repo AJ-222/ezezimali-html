@@ -2,25 +2,17 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="fundmanagerstyles.css">
-    <title>Home Page</title>
 </head>
-<body onload="getInfo()">
+<body>
     <header>
         <img src="Logos+icons/TopPage.png" alt="Ezezimali logo" id="larger-banner-logo">
         <nav>
-            <a href="/funding"><button id= "applyBtn" title="ApplyToFund" alt="Apply">Apply for Funding</button></a>
-            <a class="navIcons" href="#" title="Inbox"><img src="Logos+icons/inbox.png" alt="Inbox Icon"></a>
-            <a class = "navIcons" href="#" title="Manage Funds"><img src="Logos+icons/fund-manager.png" alt="Fund Manager Icon"></a>
-            <a class = "navIcons" href="#" title="Account"><img onclick="getInfo()" src="Logos+icons/account.png" alt="Account Icon"></a>
-            <a class = "navIcons" href="/.auth/logout?post_logout_redirect_uri=/">Log out</a>
+            <a href="#" title="Inbox"><img src="Logos+icons/inbox.png" alt="Inbox Icon"></a>
+            <a href="#" title="Manage Funds"><img src="Logos+icons/fund-manager.png" alt="Fund Manager Icon"></a>
+            <a href="#" title="Account"><img src="Logos+icons/account.png" alt="Account Icon"></a>
         </nav>
     </header>
     <main>
-        <section id = "account">
-            <h2>Account Information</h2>
-            <p id="email">Welcome </p>
-            <p id="role">Role: </p>
-        </section>
         <section id="advertise">
             <h2>Advertise Funding Opportunities</h2>
             <!-- Form to advertise funding opportunities goes here -->

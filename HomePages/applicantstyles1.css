@@ -1,0 +1,81 @@
+body {
+    background-color: #e0f7fa;
+    color: #00695c;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #80cbc4;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img#larger-banner-logo {
+    width: 35%;
+    max-height: 100px; /* Adjust this value to control the height of the logo */
+    /*object-fit: contain; /* This will ensure the logo maintains its aspect ratio */
+}
+
+nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly; /* This will distribute the space evenly between the links */
+    align-items: center;
+}
+
+nav a {
+    color: #004d40;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+#filters {
+    margin-bottom: 20px;
+}
+
+article {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #004d40;
+}
+
+article img.tiny-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+}
+
+article button {
+    background-color: #80cbc4;
+    border: none;
+    padding: 10px;
+    color: #004d40;
+    cursor: pointer;
+}
+
+article button:hover {
+    background-color: #4db6ac;
+}
+
+footer {
+    background-color: #80cbc4;
+    padding: 20px;
+    text-align: center;
+    color: #004d40;
+}
