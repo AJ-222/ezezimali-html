@@ -31,4 +31,7 @@ const userRoles = user.userRoles;
 console.log(user);
 console.log(id);
 console.log(userRoles);
+
+document.getElementById("email").innerHTML = "Welcome " + userName;
+document.getElementById("role").innerHTML = "Role: " + userRoles;
 }
