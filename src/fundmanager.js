@@ -25,10 +25,10 @@ function getInfo(){
     user = data.clientPrincipal;
   })
   .catch(error => console.error('Error:', error));
-}
-const userName = data.clientPrincipal.userDetails;
-const id = data.clientPrincipal.userID;
-const userRoles = data.clientPrincipal.userRoles;
+const userName = user.userDetails;
+const id = user.userID;
+const userRoles = user.userRoles;
 console.log(user);
 console.log(id);
 console.log(userRoles);
+}
