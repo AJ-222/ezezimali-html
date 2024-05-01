@@ -56,7 +56,7 @@ function getInfo(){
 
 async function getFunds(){
   {
-    fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/api/getfunds')
+    fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/api/funds')
     .then(response => response.json())
     .then(data => {
       console.log(data);
