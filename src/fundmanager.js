@@ -53,3 +53,7 @@ function getInfo(){
   })
   .catch(error => console.error('Error:', error));
 }
+
+function getFunds(){
+  
+}
