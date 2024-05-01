@@ -10,6 +10,11 @@
         "allowedRoles": ["admin"]
       },
       {
+        "route": "/funding",
+        "path": "funding.html",
+        "allowedRoles": ["authenticated"]
+      },
+      {
         "route": "/home",
         "path": "home.html",
         "allowedRoles": ["authenticated"]
