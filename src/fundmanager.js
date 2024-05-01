@@ -11,8 +11,10 @@ for(let i = 0; i < btns.length; i++) {
   }
 }
 
-span.onclick = function() {
-  modal.style.display = "none";
+if (span) {
+  span.onclick = function() {
+      modal.style.display = "none";
+  };
 }
 
 window.onclick = function(event) {
@@ -53,3 +55,5 @@ function getInfo(){
   })
   .catch(error => console.error('Error:', error));
 }
+
+module.exports = getInfo;

@@ -2,9 +2,12 @@
   "name": "vanilla-basic",
   "version": "1.0.0",
   "scripts": {
-    "start": "sirv ./src public --cors --single --no-clear --port 8000"
+    "start": "sirv ./src public --cors --single --no-clear --port 8000",
+    "test": "jest --coverage"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3"
   }
 }
