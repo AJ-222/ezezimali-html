@@ -22,7 +22,11 @@ function getInfo(){
   .then(response => response.json())
   .then(data => {
     const user = data.clientPrincipal.userDetails;
+    const id = data.clientPrincipal.userID;
+    const userRoles = data.clientPrincipal.userRoles;
     console.log(user);
+    console.log(id);
+    console.log(userRoles);
   })
   .catch(error => console.error('Error:', error));
 }
