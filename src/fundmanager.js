@@ -24,8 +24,11 @@ function getInfo(){
     const user = data.clientPrincipal.userDetails;
     const id = data.clientPrincipal.userID;
     const userRoles = data.clientPrincipal.userRoles;
-    document.getElementById("email").innerHTML = "Welcome " + userName;
-    document.getElementById("role").innerHTML = "Role: " + userRoles;
+    console.log(user);
+    console.log(id);
+    console.log(userRoles);
+    document.getElementById("email").innerHTML = "Welcome " + user;
+    document.getElementById("role").innerHTML = "Role: " + userRoles[0];
   })
   .catch(error => console.error('Error:', error));
 }
