@@ -28,6 +28,8 @@ function getInfo(){
     console.log(id);
     console.log(userRoles);
     document.getElementById("email").innerHTML = "Welcome " + user;
+    const length = userRoles.length;
+    const mainRole = userRoles[length - 1];
     document.getElementById("role").innerHTML = "Role: " + userRoles[0];
   })
   .catch(error => console.error('Error:', error));
