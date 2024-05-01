@@ -119,3 +119,15 @@ main > section > h2 {
     text-decoration: none;
     cursor: pointer;
 }
+#logoMain{
+    height: 100px;
+  }
+  #loginButton{   
+    display: flex;
+
+  }
+  #loginMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

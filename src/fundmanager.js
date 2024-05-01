@@ -21,10 +21,7 @@ function getInfo(){
   fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me')
   .then(response => response.json())
   .then(data => {
-    //const roles = data.clientPrinciple.userRoles;
-    const email = data.clientPrinciple.userDetails;
-    //console.log(roles);
-    console.log(email);
+    console.log(data);
   })
   .catch(error => console.error('Error:', error));
 }
