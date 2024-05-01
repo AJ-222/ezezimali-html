@@ -1,12 +1,10 @@
 {
    "routes": [
       {
-        "route": "/",
-        "path": "index.html"
+        "route": "/"
       },
       {
         "route": "/home",
-        "path": "home.html",
         "allowedRoles": ["authenticated"]
       },
       {

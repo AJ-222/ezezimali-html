@@ -25,13 +25,13 @@ function getInfo(){
     user = data.clientPrincipal;
   })
   .catch(error => console.error('Error:', error));
-const userName = user.userDetails;
-const id = user.userID;
-const userRoles = user.userRoles;
-console.log(user);
-console.log(id);
-console.log(userRoles);
+  const userName = user.userDetails;
+  const id = user.userID;
+  const userRoles = user.userRoles;
+  console.log(user);
+  console.log(id);
+  console.log(userRoles);
 
-document.getElementById("email").innerHTML = "Welcome " + userName;
-document.getElementById("role").innerHTML = "Role: " + userRoles;
+  document.getElementById("email").innerHTML = "Welcome " + userName;
+  document.getElementById("role").innerHTML = "Role: " + userRoles;
 }
