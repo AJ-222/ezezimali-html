@@ -18,6 +18,10 @@ window.onclick = function(event) {
   }
 }
 (async function() {
-    const { data } = await( await fetch(`https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me`)).json();
-    console.log(data);
-}());
+  try {
+      const response = await fetch(`https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me`);
+      console.log(response);
+  } catch (error) {
+      console.error('Error:', error);
+  }
+})();
