@@ -1,7 +1,6 @@
 var modal = document.getElementById("myModal");
 var btns = document.getElementsByClassName("open-modal");
 var span = document.getElementsByClassName("close")[0];
-let user = {};
 
 for(let i = 0; i < btns.length; i++) {
   btns[i].onclick = function() {
@@ -23,6 +22,7 @@ function getInfo(){
   .then(response => response.json())
   .then(data => {
     user = data.clientPrincipal;
+    console.log(user);
   })
   .catch(error => console.error('Error:', error));
 const userName = user.userDetails;
@@ -31,7 +31,6 @@ const userRoles = user.userRoles;
 console.log(user);
 console.log(id);
 console.log(userRoles);
-
 document.getElementById("email").innerHTML = "Welcome " + userName;
 document.getElementById("role").innerHTML = "Role: " + userRoles;
 }
