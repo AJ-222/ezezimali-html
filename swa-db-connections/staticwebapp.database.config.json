@@ -29,5 +29,21 @@
       "mode": "production"
     }
   },
-  "entities": {}
+  "entities": {
+    "Fund":{
+      "source": "dbo.funds",
+      "rest": {
+        "path": "/funds"
+      },
+      "permissions": [
+        {
+          "actions": "read",
+          "role": "anonymous"
+        }
+      ]
+    }
+
+
+
+  }
 }

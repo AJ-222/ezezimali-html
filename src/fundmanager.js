@@ -53,3 +53,14 @@ function getInfo(){
   })
   .catch(error => console.error('Error:', error));
 }
+
+async function getFunds(){
+  {
+    fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/api/getfunds')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => console.error('Error:', error));
+  }
+}
