@@ -31,9 +31,14 @@ function getInfo(){
     console.log(id);
     console.log(userRoles);
     document.getElementById("email").innerHTML = "Welcome " + user;
-    const length = userRoles.length;
-    mainRole = userRoles[length - 1];
-    if (mainRole == "authenticated"){
+
+    if (userRoles.includes("admin")){
+      mainRole = "Admin";
+    }
+    else if (userRoles.includes("fundmanager")){
+      mainRole = "Fund Manager";
+    }
+    else{
       mainRole = "Applicant";
     }
     document.getElementById("role").innerHTML = "Role: " + mainRole;
