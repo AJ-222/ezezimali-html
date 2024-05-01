@@ -28,7 +28,7 @@ nav {
     align-items: center;
 }
 
-nav a {
+.navIcons {
     color: #1b5e20;
     text-decoration: none;
     display: flex;

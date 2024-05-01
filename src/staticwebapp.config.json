@@ -4,6 +4,16 @@
         "route": "/"
       },
       {
+        "route": "/admin",
+        "path": "admin.html",
+        "allowedRoles": ["admin"]
+      },
+      {
+        "route": "/funding",
+        "path": "funding.html",
+        "allowedRoles": ["authenticated"]
+      },
+      {
         "route": "/home",
         "allowedRoles": ["authenticated"]
       },
