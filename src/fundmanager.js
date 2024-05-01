@@ -22,7 +22,7 @@ function getInfo(){
   .then(response => response.json())
   .then(data => {
     const user = data.clientPrincipal.userDetails;
-    const id = data.clientPrincipal.userID;
+    const id = data.clientPrincipal.userId;
     const userRoles = data.clientPrincipal.userRoles;
     console.log(user);
     console.log(id);
