@@ -17,4 +17,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-;
+(async function() {
+    const { data } = await( await fetch(`https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me`)).json();
+    console.log(data);
+}());
