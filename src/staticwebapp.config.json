@@ -5,6 +5,11 @@
         "path": "index.html"
       },
       {
+        "route": "/admin",
+        "path": "admin.html",
+        "allowedRoles": ["admin"]
+      },
+      {
         "route": "/home",
         "path": "home.html",
         "allowedRoles": ["authenticated"]

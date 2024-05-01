@@ -42,6 +42,14 @@ function getInfo(){
       mainRole = "Applicant";
     }
     document.getElementById("role").innerHTML = "Role: " + mainRole;
+    if (mainRole == "Admin"){
+      const adminButton = document.createElement("button");
+      adminButton.innerHTML = "Admin";
+      adminButton.onclick = function() {
+        window.location.href = "admin.html";
+      };
+      document.getElementById("account").appendChild(adminButton);
+    }
   })
   .catch(error => console.error('Error:', error));
 }
