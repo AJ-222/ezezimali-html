@@ -17,9 +17,4 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-app.get('/login', 
-  passport.authenticate('azuread-openidconnect', { failureRedirect: '/' }),
-  function(req, res) {
-    res.redirect('/');
-  }
-);
+;
