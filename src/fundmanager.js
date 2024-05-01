@@ -18,7 +18,7 @@ window.onclick = function(event) {
   }
 }
 function getInfo(){
-  fetch('https://api.example.com/data')
+  fetch('https://mango-pond-0eb19fd03.5.azurestaticapps.net/.auth/me')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));

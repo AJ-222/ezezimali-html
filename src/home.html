@@ -10,7 +10,7 @@
         <nav>
             <a href="#" title="Inbox"><img src="Logos+icons/inbox.png" alt="Inbox Icon"></a>
             <a href="#" title="Manage Funds"><img src="Logos+icons/fund-manager.png" alt="Fund Manager Icon"></a>
-            <a href="#" title="Account"><img src="Logos+icons/account.png" alt="Account Icon"></a>
+            <a href="#" title="Account"><img onclick="getInfo()" src="Logos+icons/account.png" alt="Account Icon"></a>
             <a href="/.auth/logout?post_logout_redirect_uri=/">Log out</a>
         </nav>
     </header>
@@ -57,7 +57,7 @@
             <p>Type: Education</p>
             <p>Brief: I am seeking funding for my college tuition...</p>
             <button>Approve</button>
-            <button onclick="getInfo()">Deny</button>
+            <button>Deny</button>
         </section>
     </aside>
 </body>
